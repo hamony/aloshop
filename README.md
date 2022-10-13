@@ -19,6 +19,7 @@ Great! We have finished some stuff, let's go and play around.
 # Technical stack
 - Node.js
 - Docker && Docker Compose
+- HTML && CSS
 
 # Testing
 
