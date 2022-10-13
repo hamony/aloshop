@@ -14,6 +14,8 @@ At first time, it will take time to build containers and other involving.
 
 Great! We have finished some stuff, let's go and play around.
 
+[Click me and take a look](http://localhost:8080)
+
 # Technical stack
 - Node.js
 - Docker && Docker Compose
