@@ -1,0 +1,28 @@
+{
+  "name": "aloshop",
+  "version": "1.0.0",
+  "description": "This is a home assignment of interview",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "shop"
+  ],
+  "author": "Khoa Nguyen",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "http-errors": "^2.0.0",
+    "session": "^0.1.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.0"
+  }
+}

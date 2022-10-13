@@ -1,0 +1,25 @@
+<div class="mt-2">
+    <h2>{{name}}</span></h2>
+</div>
+<div class="row">
+    {{#each products}}
+    <div class="col-md-6 col-lg-4 col-xl-3">
+        <div class="card">
+            <img src="/img/products/{{image_path}}" alt="{{name}}" class="card-img">
+            <div class="card-body">
+                <p>{{../name}}</p>
+                <h4 class="card-product__title"><a href="/products/{{name}}">{{name}}</a></h4>
+                {{#if old_price}}
+                    <p class="card-product__oldprice">&#163;{{old_price}}</p>
+                {{/if}}
+                <p class="card-product__price">&#163;{{price}}</p>
+            </div>
+            {{#if available}}
+            <button class="add-to-cart" data-id="{{id}}">
+                <i class="fas fa-shopping-cart"></i>
+            </button>
+            {{/if}}
+        </div>
+    </div>
+    {{/each}}
+</div>

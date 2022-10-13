@@ -1,0 +1,150 @@
+body {
+    color: #777;
+    font-family: "Roboto",sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+/**
+* Product detail
+*/
+.card-product__title {
+    font-size: 20px;
+}
+
+.card-product__title a {
+    color: #222;
+}
+
+.card-product__oldprice, .s_product_text h2.oldprice {
+    text-decoration: line-through;
+}
+
+.s_product_text h3 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.s_product_text h2 {
+    font-family: "Roboto",sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #384aeb;
+    margin-bottom: 10px;
+}
+
+.s_product_text h2.oldprice {
+    color: #777;
+}
+
+.product_count {
+    display: inline-block;
+    position: relative;
+}
+
+.product_count input {
+    width: 100px;
+    padding-left: 30px;
+    height: 40px;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #eeeeee;
+    border-radius: 3px;
+}
+
+.product_count button {
+    display: block;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    font-size: 14px;
+    color: #cccccc;
+}
+
+.product_count button.increase {
+    top: -2px;
+}
+
+.product_count button.reduced {
+    bottom: -4px;
+}
+
+.product_count .increase::before {
+    content: "";
+    height: 40px;
+    width: 1px;
+    position: absolute;
+    left: -3px;
+    top: 0px;
+    background: #eeeeee;
+}
+
+ul.nav-shopping-cart {
+    margin-right: 200px;
+}
+
+.nav-shopping-cart li button .nav-shop__circle {
+    font-size: 9px;
+    display: inline-block;
+    background: #384aeb;
+    color: #fff;
+    padding: 0px 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: -8px;
+    right: -12px;
+}
+
+.nav-shopping-cart li button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    position: relative;
+}
+
+.nav-shopping-cart li:last-child {
+    margin-left: 40px;
+}
+
+/**
+* Cart 
+*/
+.cart_inner .table tbody tr td .media .media-body {
+    vertical-align: middle;
+    align-self: center;
+}
+
+.cart_inner .table tbody tr td {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    vertical-align: middle;
+    align-self: center;
+}
+
+.cart_inner .table tbody tr td .media .d-flex {
+    padding-right: 30px;
+}
+
+.cart_inner .table tbody tr.bottom_button .button {
+    font-size: 15px;
+    padding: 7px 18px;
+    background: #f9f9ff;
+    border-color: #EEEEEE;
+    color: #222;
+    border-radius: 30px;
+}

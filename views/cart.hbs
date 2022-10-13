@@ -1,0 +1,112 @@
+{{#with cart}}
+<div class="container mt-5">
+    {{#if items.length}}
+    <div class="cart_inner" id="cart-body">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th>&nbsp;</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each items}}
+                    <tr id="item{{id}}">
+                        <td>
+                            <div class="media">
+                                <div class="d-flex">
+                                <a href="/products/{{name}}">
+                                    <img width="200" class="img-fluid" src="/img/products/{{image_path}}" alt="{{name}}">
+                                </a>
+                                </div>
+                                <div class="media-body">
+                                    <p>{{name}}</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td><button type="button" onclick="removeCartItem({{id}})"><i class='fas fa-trash-alt'></i></button></td>
+                        <td>
+                            {{#if old_price}}
+                                <h5 class="card-product__oldprice">&#163;{{old_price}}</h5>
+                            {{/if}}
+                            <h5>&#163;{{price}}</h5>
+                        </td>
+                        <td>
+                            <div class="product_count">
+                                <input type="text" name="qty" id="product_quantity{{id}}" maxlength="12" value="{{quantity}}" title="Quantity:"
+                                    class="input-text qty" readonly>
+                                <button onclick="var result = document.getElementById('product_quantity{{id}}'); var sst = result.value; if( !isNaN( sst )) result.value++;updateCart({{id}},result.value);return false;"
+                                    class="increase items-count" type="button"><i class="fas fa-chevron-up"></i></button>
+                                <button onclick="var result = document.getElementById('product_quantity{{id}}'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 1 || (sst == 1) &amp;&amp; confirm('Do you really want to remove this item')) result.value--;updateCart({{id}},result.value);return false;"
+                                    class="reduced items-count" type="button"><i class="fas fa-chevron-down"></i></button>
+                            </div>
+                        </td>
+                        <td>
+                            <h5 id="itemTotal{{id}}">&#163;{{total}}</h5>
+                        </td>
+                    </tr>
+                    {{/each}}
+                    <tr class="bottom_button">
+                        <td>
+                            <a class="button bg-danger text-white" href="#" onclick="clearCart()">Clear Cart</a>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <label class="voucher-error text-danger"></label>
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <input type="text" placeholder="Voucher Code" id="voucher_code">
+                                <div class="input-group-append">
+                                    <a class="btn btn-primary apply-voucher" href="javascript:void(0)" onclick="var voucherCode = document.getElementById('voucher_code'); this.setAttribute('data-voucher',voucherCode.value); if(voucherCode.value != '') applyVoucher(voucherCode.value);return false;" data-voucher="">Apply</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <h5>Subtotal</h5>
+                        </td>
+                        <td>
+                            <h5 id="subTotal">&#163;{{subTotal}}</h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border-0"></td>
+                        <td class="border-0"></td>
+                        <td class="border-0"></td>
+                        <td>
+                            <h5>Discount</h5>
+                        </td>
+                        <td>
+                            <h5 id="totalDiscount">&#163;{{totalDiscount}}</h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border-0"></td>
+                        <td class="border-0"></td>
+                        <td class="border-0"></td>
+                        <td>
+                            <h5>Total</h5>
+                        </td>
+                        <td>
+                            <h5 id="total">&#163;{{total}}</h5>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {{else}}
+    <div class="alert alert-info text-center">Your cart is empty.</div>
+    {{/if}}
+</div>
+{{/with}}
