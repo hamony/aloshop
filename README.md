@@ -17,9 +17,11 @@ Great! We have finished some stuff, let's go and play around.
 [Click me and take a look](http://localhost:8080)
 
 # Technical stack
-- Node.js
+- Javascript
 - Docker && Docker Compose
 - HTML && CSS
+- Bootstrap
+- Jquery
 
 # Testing
 
