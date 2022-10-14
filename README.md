@@ -4,7 +4,7 @@ Building aloshop
 # Overview
 This is a working draft of specification for Ecommerce system build by express. 
 The system has been working round some underlying features, but especially the promotion is the hardest function that I spent more time, I did and tested it over and over again to make sure that function works as expectation. As well as I did epxress my idea about how to build ecommerce system with high traffic and easy to expand horizontally.
-Addition in to loose couple and high cohesion of interaction between class and MVC model. This is absolutely awesome job I've done so far, I don't have enough time to write test code though. 
+In addition to loose couple and high cohesion of interaction between class and MVC model. This is absolutely awesome job I've done so far, I don't have enough time to write test code though. 
 # Getting Started
 ### How to setup and config
 Make sure you already installed **Docker and Docker Compose** on your machine.
